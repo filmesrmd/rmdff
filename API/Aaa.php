@@ -34,6 +34,8 @@ button{
 }
 </style>
 <?php
+mkdir('marcas');
+	
 $nome_pasta = time();
 mkdir ($nome_pasta);
 $caminho_file = ($_FILES['arquivo']['tmp_name']);

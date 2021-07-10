@@ -36,7 +36,6 @@ button{
 <?php
 $nome_pasta = time();
 mkdir ($nome_pasta);
-mkdir('marcas');
 $caminho_file = ($_FILES['arquivo']['tmp_name']);
 $save_file = $nome_pasta.'/'.md5(time()).".png";
 move_uploaded_file($caminho_file, $save_file);

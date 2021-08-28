@@ -32,7 +32,7 @@ $very = file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdat
 $very2 = file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android/'.$next2.'/versioninfo');
 
 if($very || $very2){
-     $conf = 'Possui um versao disponivel';
+     $conf = 'Possui uma versao disponivel';
 }else{
      $conf = "Nada disponivel no momento";
 }

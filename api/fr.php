@@ -7,7 +7,7 @@ echo "<center><b id = 'loc'>".$url->loc_adv."</b></center><br>";
 echo "<b id = 'ver'>Versão atual: ".$url->version_atual." (Status: ".$url->status.")</b><br>";
 echo "<b id = 'che'>".$url->next_version."</b>";
 echo "<div style = 'float:right;'><b class = 'date'>Registro ADV: ".$url->registro_adv."</b><br>";
-echo "<b class = 'date'>Período de Teste: ".$url->playtest_adv."</b><br>";
+echo "<b class = 'date'>Início do ADV: ".$url->playtest_adv."</b><br>";
 echo "<b class = 'date'>Fim ADV: ".$url->fim_adv."</b></div><br><br>";
 echo "<br><br><center><b class = 'date'>Ícones de recargas</b></center>";
 ?>

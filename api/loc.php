@@ -14,7 +14,7 @@ if($loc_65){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc65'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc65'>65- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
  }
 if($loc_66){
@@ -23,7 +23,7 @@ if($loc_66){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc66'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc66'>66- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
 	} 
 if($loc_67){
@@ -32,7 +32,7 @@ if($loc_67){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc67'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc67'>67- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
 	} 
 if($loc_68){
@@ -41,7 +41,7 @@ if($loc_68){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc68'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc68'>68- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
 	} 
 if($loc_69){
@@ -50,7 +50,7 @@ if($loc_69){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc69'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc69'>69- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
 	} 	
 if($loc_70){
@@ -59,7 +59,7 @@ if($loc_70){
 	$pega_loc2a = explode(',',$pega_loc1a[1]);
 	$pega_loc3a = explode('=',$pega_loc2a[8]);
 	$pega_loc4a = explode('=',$pega_loc2a[11]);
-	$loc_next_version = "<label id = 'loc70'>loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
+	$loc_next_version = "<label id = 'loc70'>70- loc_pt-br.".$pega_loc4a[0] ."~3D</label>";
 	echo $loc_next_version;
 	} 	
 ?>

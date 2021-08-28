@@ -1,57 +1,50 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 0);
-header('Content-Type: application/json');
+$url = json_decode(file_get_contents('https://rmdff.vercel.app/api/projeto'));
 
-//captura aos link
-$adv = json_decode(file_get_contents('https://ff-advance.ff.garena.com/api/index?lang=pt'));
-$convert = json_decode(file_get_contents('http://ws2.aptoide.com/api/7/app/getMeta/package_name=com.dts.freefireth'));
-$icone = "https://cdngarenanow-a.akamaihd.net/gop/app/0000/100/067/icon.png";
-$review_server = file_get_contents("https://review.client.common.freefiremobile.com");
-$loc_url = file_get_contents('https://rmdff.vercel.app/api/loc.php');
-
-//retira
-$loc_ex1 = explode('>', $loc_url);
-$loc_ex2 = explode('<',$loc_ex1[1]); 
-if($review_server){$review =  "Servidor de teste online";}
-else{$review="Servidor de teste offlie";}
-$versao = $convert->data->file->vername;
-$versao_atual = json_decode(file_get_contents("https://version.common.freefiremobile.com/live/ver.php?version=".$versao."&device=android"));
-
-$va = $versao_atual->remote_version;
-if($versao_atual->is_server_open == "true"){$status  = "Online";}else{$status  = "Offline";}
-$time_re= $adv->register_time[0];
-$time_jo= $adv->playtest_time[0];
-$time_jo_end= $adv->playtest_time[1];
-
-$explode = explode('.',$versao_atual->remote_version);
-$soma = $explode[2]+'1';
-$next = $explode[0].".".$explode[1].".".$soma;
-$next2 = $next+1;
-$very = file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android/'.$next.'/versioninfo');
-$very2 = file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android/'.$next2.'/versioninfo');
-
-if($very || $very2){
-     $conf = 'Possui um versao disponivel';
-}else{
-     $conf = "Nada disponivel no momento";
-}
-$version_ff = $versao;
-$atual = $va;
-$loc = $loc_ex2[0];
-$server_review = $review;
-$o = $status;
-
-$res = [
-     "version"=>$version_ff,
-     "version_atual"=>$atual,
-     "status"=>$status,
-     "icone"=>$icone,
-     "registro_adv"=>date("d-m-Y",$time_re),
-     "playtest_adv"=>date("d-m-Y",$time_jo),
-     "fim_adv"=>date("d-m-Y",$time_jo_end),
-     "next_version"=>$conf,
-     "loc_adv"=>$loc
- ];
-echo json_encode($res);
+echo "<div style = 'text-align:center'><b id = 'title'>FF: ".$url->version."</b><br>";
+echo "<img id 'img' src = '".$url->icone."'></div><br>";
+echo "<center><b id = 'loc'>".$url->loc_adv."</b></center><br>";
+echo "<b id = 'ver'>Versão atual: ".$url->version_atual." (Status: ".$url->status.")</b><br>";
+echo "<b id = 'che'>".$url->next_version."</b>";
+echo "<div style = 'float:right;'><b class = 'date'>Registro ADV: ".$url->registro_adv."</b><br>";
+echo "<b class = 'date'>Período de Teste: ".$url->playtest_adv."</b><br>";
+echo "<b class = 'date'>Fim ADV: ".$url->fim_adv."</b></div><br><br>";
+echo "<br><br><center><b class = 'date'>Ícones de recargas</b></center>";
 ?>
+<style>
+body{color: #fff;background: black}
+#ver{font-size: 24px;}
+#che{font-size: 22px}
+#loc{font-size: 24px}
+.date{font-size: 22px}
+
+  #title{
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #fff;
+     font-size: 3em; color: #000;
+   }
+</style>
+<img id = "img1">
+<img id = "img2">
+<img id = "img3">
+<img id = "img4">
+<script>   
+var data = new Date()
+var dia = data.getDate()
+var mes = data.getMonth()+1
+if(dia<10){var dia = "0"+dia}
+if(mes<10){var mes = "0"+mes}
+var i2 = Number(dia+1);var i3 = Number(dia+2);var i4 = Number(dia+3)
+img1.src='https://dl.ctl.freefiremobile.com/common/OB29/Topupicons/TOPUPEvent'+mes+dia+'BR_pt.png'
+img2.src='https://dl.ctl.freefiremobile.com/common/OB29/Topupicons/TOPUPEvent'+mes+i2+'BR_pt.png'
+img3.src='https://dl.ctl.freefiremobile.com/common/OB29/Topupicons/TOPUPEvent'+mes+i3+'BR_pt.png'
+img4.src='https://dl.ctl.freefiremobile.com/common/OB29/Topupicons/TOPUPEvent'+mes+i4+'BR_pt.png'
+img1.onerror=function(){img1.style.display = "none"}
+img2.onerror=function(){img2.style.display = "none"}
+img3.onerror=function(){img3.style.display = "none"}
+img4.onerror=function(){img4.style.display = "none"}
+
+
+     if(che.innerHTML.match("disponivel")){che.style.color="green"}else{che.style.color="red"}
+     if(loc.innerHTML.match("66")){loc.style.color="green"}else{loc.style.color="whiter"}
+</script>

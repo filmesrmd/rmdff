@@ -4,14 +4,6 @@ $ch = curl_init();
 curl_setopt_array($ch, [
   		CURLOPT_URL => "https://us.preregistration.ffmax.garena.com/api/rank?lang=pt-br&region=BR",
   		CURLOPT_HTTPHEADER => [
-	"accept: application/json, text/plain, */*",
-	"x-csrftoken: aItigzPXtE4nTqTtkJKZyS3AGHPUFDf4bcXkTyZwKPQEG1hfzubc4i2lA2NoMMDy",
-	"sec-ch-ua-mobile: ?0",
-	"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36 Edg/92.0.902.84",
-	"sec-fetch-site: same-origin",
-	"sec-fetch-mode: cors",
-	"sec-fetch-dest: empty",
-	"referer: https://us.preregistration.ffmax.garena.com/BR/?access_token=645AA92F376F472C3A99C80C77E125099F1ADD8AAEE730F06B2ADFE3E81DAA664DBD6EAD6E086EBA88F3F7B98059C6D04330AA21FA04FCCD193447A3DFF5ADCA1EC8EDB8063B598BA6FF847A57241067",
 	"cookie: _ga_RN81RB2KQE=GS1.1.1627414982.1.1.1627415838.0",
 	"cookie: _ga_5ZFPPM2PHQ=GS1.1.1629693326.6.0.1629693326.0",
 	"cookie: _ga_KS47KC1J05=GS1.1.1629783349.8.0.1629783349.0",

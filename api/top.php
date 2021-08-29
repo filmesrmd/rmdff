@@ -18,9 +18,5 @@ curl_setopt_array($ch, [
 	  CURLOPT_RETURNTRANSFER=>true,	  
 	]
 );
-$res = json_decode(curl_exec($ch));
-
-for ($i = 0; $i<100;$i++){
-echo 1+$i."º ".$res->data->rank[$i]->team_name." (".$res->data->rank[$i]->member_num.")<br><br>";
-}
+echo curl_exec($ch);
 ?>
